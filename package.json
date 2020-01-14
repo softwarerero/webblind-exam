@@ -1,0 +1,39 @@
+{
+    "name": "webblind-exam",
+    "private": true,
+    "scripts": {
+        "start": "meteor run --port 3020",
+        "cypress": "unset NODE_OPTIONS && cypress open",
+        "lint": "eslint .",
+        "pretjs": "prettier --write \"**/*.js\"",
+        "pretjsx": "prettier --write \"**/*.jsx\"",
+        "quality": "yarn lint && yarn pretjs && yarn pretjsx"
+    },
+    "dependencies": {
+        "@babel/core": "^7.7.7",
+        "@babel/plugin-proposal-optional-chaining": "^7.7.5",
+        "@babel/runtime": "^7.6.3",
+        "dayjs": "^1.8.19",
+        "meteor-node-stubs": "^0.4.1",
+        "prettier": "^1.18.2",
+        "react": "^16.10.2",
+        "react-dom": "^16.10.2",
+        "styled-components": "^4.4.1"
+    },
+    "meteor": {
+        "mainModule": {
+            "client": "client/main.jsx",
+            "server": "server/main.js"
+        }
+    },
+    "devDependencies": {
+        "@testing-library/cypress": "^5.0.2",
+        "babel-eslint": "^8.2.2",
+        "eslint": "^4.19.1"
+    },
+    "babel": {
+        "plugins": [
+            "@babel/plugin-proposal-optional-chaining"
+        ]
+    }
+}

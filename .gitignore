@@ -1,0 +1,8 @@
+.vscode
+.meteor/local
+node_modules/
+/packages
+.DS_Store
+.id
+run.sh
+.cache
